@@ -1,0 +1,10 @@
+{%extends "base.html" %}
+
+{% block content %}
+  <h3>Index page</h3>
+  {% with source_page="index" %}
+      {% include "search.html" %}
+  {% endwith %}
+{% endblock %}
+
+

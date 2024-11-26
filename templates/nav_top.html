@@ -1,0 +1,26 @@
+ <!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-expand-sm bg-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav nav_tabs">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{{ url_for('home') }}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{{ url_for('index') }}">Index</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav nav_tabs">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#">Middle 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#">Middle 2</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav nav_tabs">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{{ url_for('login') }}">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>

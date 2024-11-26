@@ -1,0 +1,17 @@
+<form action = "http://localhost:8080/{{source_page}}" method = "post">
+    <hr>
+    <h5  class="fw-bold d-inline-block">Enter search string:</h5>
+    <input  type="text"   class="d-inline-block rounded py-1 mt-1" name="search_string" />
+    <input  type="submit" class="btn btn-primary py-1 mb-1" value="Submit" />
+      {% if search_response.response_type == "error" %}
+        <div class="col-6 text-danger fw-bold">{{search_response.response_message}}</div>
+      {% endif %}
+      {% if search_response.response_type == "info" %}
+        <div class="col-6 text-info fw-bold">{{search_response.response_message}}</div>
+      {% endif %}
+      {% if search_response.response_type == "success" %}
+        <div class="col-6 text-success fw-bold">{{search_response.response_message}}</div>
+      {% endif %}
+    <hr>
+
+</form>

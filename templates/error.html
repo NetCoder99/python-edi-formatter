@@ -1,0 +1,31 @@
+{%extends "base.html" %}
+{% block content %}
+  <h3 class="d-flex justify-content-center text-danger fw-bold">Error detected!</h3>
+  <div class="container">
+    {% if err_code %}
+    <div class="row">
+        <div class="col-2 text-danger fw-bold">Error Code:</div>
+        <div class="col-6 text-danger fw-bold">{{err_code}}</div>
+    </div>
+    <div class="row">
+        <div class="col-2 text-danger fw-bold">Error Name:</div>
+        <div class="col-6 text-danger fw-bold">{{err_name}}</div>
+    </div>
+    <div class="row">
+        <div class="col-2 text-danger fw-bold">Error Desc:</div>
+        <div class="col-6 text-danger fw-bold">{{err_desc}}</div>
+    </div>
+    {% endif %}
+
+  </div>
+
+
+  {% with messages = get_flashed_messages()%}
+    {% if messages%}
+      {% for message in messages%}
+        <p>{{message}}</p>
+      {%endfor%}
+    {%endif%}
+  {%endwith%}
+{% endblock %}
+
